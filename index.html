@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie List</title>
+    <link rel="stylesheet" type="text/css" href="assets/grid.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="app.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="container">
+          <div class="col-12">
+            <h1>Create  a list of your favourite movies</h1>
+          </div>
+          <form id="movie-form" class="form">
+            <div class="row">
+              <div class="col-3">
+                <div class="input-group">
+                  <label for="title">Title</label>
+                  <input type="text" id="title" class="input-field" placeholder="ex: Antman and The Wasp">
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="input-group">
+                  <label for="director">Director(s)</label>
+                  <input type="text" id="director" class="input-field" placeholder="ex: Joss Whedon">
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="input-group">
+                  <label for="year">Year of Release</label>
+                  <input type="text" id="year" class="input-field" placeholder="ex: 2018">
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="input-group">
+                  <label for="url-trailer">Url to trailer</label>
+                  <input type="text" id="url-trailer" class="input-field" placeholder="ex: http://website.com/path-to-trailer">
+                </div>
+              </div>
+              <div class="col-3">
+                <input type="submit" value="Add Movie" class="button">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="display-area">
+        <div class="container">
+          <div id="loader">
+            <div id="loading">
+              
+            </div>
+          </div>
+          <div id="movie-list" class="row">
+            <div class="col-12">
+              <h3 id="section-title">Your Collection</h3>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <script src="app.js"></script>
+    </body>
+  </html>

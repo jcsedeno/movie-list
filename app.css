@@ -1,0 +1,187 @@
+*,
+html,
+body {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+input:focus,
+a:focus {
+    outline: none;
+}
+
+#loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+#loading {
+    height: 40px;
+    width: 40px;
+    margin: 5em auto;
+    padding: 15px;
+    border: 10px solid #ccc;
+    border-right-color: #aa33ee;
+    border-radius: 22px;
+    -webkit-animation: rotate 0.6s infinite linear;
+    display: none;
+    z-index: 9999;
+}
+
+@-webkit-keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/*buttons*/
+
+.button {
+    border: none;
+    background: #aa33ee;
+    color: #fff;
+    padding: 14px 16px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px auto;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.trailer-link {
+    color: #aa33ee;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/*Alert Boxes*/
+
+.success,
+.error {
+    color: white;
+    padding: 5px;
+    margin: 0 0 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.8s ease;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.success {
+    background: green;
+}
+
+.error {
+    background: red;
+}
+
+/*main*/
+
+.header {
+    min-height: 40vh;
+    padding: 2em 0;
+    background: linear-gradient( rgba(170, 51, 238, .6), rgba(0, 0, 0, .9)), url(assets/cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.header .form {
+    padding: 0;
+}
+
+.header .form .input-group {
+    margin: 10px auto;
+}
+
+.header .form .input-group label {
+    display: block;
+    font-size: 15px;
+    color: #fff;
+}
+
+.header .form .input-group .input-field {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 14px 16px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    background: #fff;
+}
+
+.display-area {
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+}
+
+.display-area h1 {
+    font-size: 25px;
+}
+
+.display-area .movie-card {
+    border-radius: 10px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 950px) {
+    .display-area .movie-card {
+        border-radius: 10px;
+        min-height: auto;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.display-area .movie-card .content {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 4rem 1rem;
+    position: relative;
+}
+
+.display-area .movie-card .content h3 {
+    font-size: 22px;
+}
+
+.display-area .movie-card .content p {
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.display-area .movie-card .delete {
+    position: absolute;
+    top: 10px;
+    right: 1em;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+    background: #aa33ee;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.22);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.display-area #movie-list {
+    position: relative;
+}
